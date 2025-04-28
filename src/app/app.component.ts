@@ -1,12 +1,14 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TodoComponent } from './todo/todo.component';
+import { AllAboutDirectiveComponent } from './all-about-directive/all-about-directive.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [TodoComponent,AllAboutDirectiveComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'my-angular';
+ fontSize = '80'
 }

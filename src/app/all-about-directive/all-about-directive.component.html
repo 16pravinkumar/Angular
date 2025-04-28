@@ -1,0 +1,16 @@
+<p>all-about-directive works!</p>
+<div *ngFor="let student of students" >
+  <p>{{student.name}}</p>
+    <div *ngFor="let course of student.courses">
+      <p>{{course.courseName}}</p>
+    </div>
+</div>
+
+
+<!-- Nest -->
+<div *ngIf="isLoggedIn; else elseBlock">
+  <p>WEloem</p>
+</div>
+<ng-template #elseBlock>
+   <p>Logout</p>
+</ng-template>

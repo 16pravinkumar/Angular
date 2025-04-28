@@ -1,0 +1,18 @@
+<input [(ngModel)]="todo" value={{updatedData}} type="text" placeholder="Enter element" />
+<button (click)="handleSubmit()">{{ edit ? "Update" : "Submit" }}</button>
+
+<div *ngFor="let item of tasksList">
+  <div
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 2rem;
+    "
+  >
+    <p>{{ item.id }}</p>
+    <p>{{ item.title }}</p>
+    <button (click)="handleDelete(item.id)">Delete</button>
+    <button (click)="handleUpdate(item.id)">Update</button>
+  </div>
+</div>
