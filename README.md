@@ -57,3 +57,17 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+# How to add smooth animation when element appers and when not 
+```bash
+export const divHoverAnimation = trigger('onDivHover', [
+  transition('void => isVis', [
+    style({opacity: 0}),
+    animate('600ms ease-in', style({ opacity: 1 })),
+  ]),
+
+  transition('isVis => void', [
+    animate('600ms ease-out', style({ opacity: 0 })),
+  ]),
+]);
+```
